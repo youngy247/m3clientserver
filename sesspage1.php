@@ -14,3 +14,7 @@ $_SESSION['username'] = 'fred1234'; // create a new session variable
 echo '<pre>';
 print_r($_SESSION);
 echo '</pre>';
+
+echo '<a href="sesspage2.php">'
+    . '<button type = "button">Next Page</button>'
+    . '</a>';
