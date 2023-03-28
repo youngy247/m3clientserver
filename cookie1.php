@@ -5,3 +5,5 @@
 setcookie('mar-group', 'demi grey hounds');
 
 setcookie('ten-seconds', 'I will last for 10 seconds', time() + 10);
+
+setcookie('current-age', 21);
