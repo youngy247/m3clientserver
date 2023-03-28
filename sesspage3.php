@@ -1,16 +1,15 @@
 <?php
+// Start the session
 session_start();
 
-setcookie('PHPSESSID', '', -3600);
+// Delete the PHPSESSID cookie
+setcookie('PHPSESSID', '', time() - 3600, '/');
 
-echo '<pre';
-echo 'PHPSESSID: ' . $_COOKIE['PHPSESSID'];
-echo '</pre>';
+// Unset the session ID
+unset($_COOKIE['PHPSESSID']);
 
-// Remove all session variables
+// Exit the script
+exit();
 
-session_unset();
-
-// End the session
-
-session_destroy();
+// Redirect the browser to the current URL without the PHPSESSID cookie
+header('Location: ' . $_SERVER['REQUEST_URI']);
